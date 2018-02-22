@@ -307,19 +307,23 @@ Helpers.formatTransactionBalance = function(value, exchangeRates, unit) {
     var unit = unit || EthTools.getUnit(),
         format = '0,0.00';
 
-    if((unit === 'usd' || unit === 'eur' || unit === 'btc') &&
-       exchangeRates && exchangeRates[unit]) {
+// ESC 단위
+    return EthTools.formatBalance(value, format + '[0000000000000000]')+ ' ESC';
+//    return EthTools.formatBalance(value, format) + ' '+ unit.toUpperCase();
+        
+    // if((unit === 'usd' || unit === 'eur' || unit === 'btc') &&
+    //    exchangeRates && exchangeRates[unit]) {
 
-        if(unit === 'btc')
-            format += '[000000]';
-        else
-            format += '[0]';
+    //     if(unit === 'btc')
+    //         format += '[000000]';
+    //     else
+    //         format += '[0]';
 
-        var price = new BigNumber(String(web3.fromWei(value, 'ether')), 10).times(exchangeRates[unit].price);
-        return EthTools.formatNumber(price, format) + ' '+ unit.toUpperCase();
-    } else {
-        return EthTools.formatBalance(value, format + '[0000000000000000] UNIT');
-    }
+    //     var price = new BigNumber(String(web3.fromWei(value, 'ether')), 10).times(exchangeRates[unit].price);
+    //     return EthTools.formatNumber(price, format) + ' '+ unit.toUpperCase();
+    // } else {
+    //     return EthTools.formatBalance(value, format + '[0000000000000000] UNIT');
+    // }
 };
 
 

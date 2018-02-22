@@ -51,13 +51,15 @@
             {{/if}}
 
 
-
+<!--대시보드 계정요약 잔고 나오는 부분 -->
             <div class="wallet-box-list">
             {{#each wallets}}
+<!--elements_account element 폴더의 는 account.js account.html 호출 -->
                 {{> elements_account account=_id wallets=true}}
             {{/each}}
             </div>
 
+<!--대시보드 계정추가 버튼 -->
             {{#if hasMinimumBalance}}
                 <a href="{{pathFor route='createAccount'}}" class="wallet-box create">
                     <div class="account-pattern">

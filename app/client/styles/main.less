@@ -258,6 +258,25 @@ body {
 }
 
 
+.app-blur .dapp-header, .dapp-header{
+    background:-moz-linear-gradient(left, #19f1c3 0%, #64b1ff 50%, #ac83ff 100%);
+    background:-webkit-linear-gradient(left, #19f1c3 0%,#64b1ff 50%,#ac83ff 100%);
+    background:linear-gradient(to right, #19f1c3 0%,#64b1ff 50%,#ac83ff 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#19f1c3', endColorstr='#ac83ff',GradientType=1 );
+}
+.dapp-header nav>ul a, .dapp-header nav>ul a:visited, .dapp-header nav>ul .inline-form>button,
+.dapp-header .block-info,
+.dapp-header .wallet-balance span.account-balance{
+  color:#fff;
+}
+.dapp-header nav>ul>li.active a, .dapp-header nav>ul>li.active button, .dapp-header nav>ul>li button.active, .dapp-header nav>ul>li a.active{margin-bottom:1px;color:#363b59;border-bottom: 4px solid #363b59;}
+.dapp-header.dapp-small nav>ul>li.active a, .dapp-header.dapp-small nav>ul>li.active button, .dapp-header.dapp-small nav>ul>li button.active, .dapp-header.dapp-small nav>ul>li a.active{margin-bottom:0;}
+.dapp-header .wallet-balance h3{color:#ffe500;}
+h2{background-color:#363b59;color:#fff;}
+.block-info .icon-clock, .block-info .icon-clock+span, .block-info .hide-on-small span{color:#010101;}
+.dapp-content h1{color:#363b59;}
+
+
 .account-balance {
     span {
         font-size: 0.6em;

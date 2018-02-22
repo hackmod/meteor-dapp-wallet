@@ -41,6 +41,7 @@
                        {{#if tokenId}}
                             {{tokenValue}}
                         {{else}}
+<!-- 트랜잭션 팝업창 전송조회에서 금액 나오는 부분-->
                             {{formatTransactionBalance value exchangeRates}}
                             {{#if $neq unit 'ether'}}
                                 <br>

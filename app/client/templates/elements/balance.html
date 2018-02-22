@@ -3,13 +3,16 @@
         {{convertedBalance}}
 
         {{! getBalance is necessary to make the count up/down animation work}}
+        {{! 대시보드 회원 잔고 가져오는 부분}}
         {{getBalance}}
 
         {{#if changeUnit}}
             {{> elements_selectableUnit}}
         {{else}}
             <span>
-                {{unit}}
+                {{! 단위가 나오는 부분}}
+                {{! unit}}
+                ESC
             </span>
         {{/if}}
     </span>
